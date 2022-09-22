@@ -2,10 +2,13 @@
     padding: 0px;
     margin: 0px;
     font-family: monospace;
+    list-style: none;
+    text-decoration: none;
 }
 
 html{
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 /*#######################################################################
@@ -82,4 +85,47 @@ login section
     color: white;
     padding-left: 0px;
     border:none;
+}
+.error{
+    height: 3rem;
+    font-size: 1.5rem;
+    color:red;
+    margin-top: 1rem;
+}
+/*#######################################################################
+footer section
+#######################################################################*/
+footer{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .foot-cont{
+    width: 90%;
+    margin: 2rem 0px;
+}
+footer .foot-cont h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-left: 2rem;
+}
+.foot-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.foot-link ul{
+    width: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.foot-link ul a:link,.foot-link ul a:visited{
+    font-size: 1.5rem;
+    color:black;
+}
+.foot-link ul a:hover,.foot-link ul a:active{
+    color: blue;
 }
