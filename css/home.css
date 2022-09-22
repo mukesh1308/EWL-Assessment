@@ -35,3 +35,41 @@ nav h3{
     letter-spacing: 2px;
     font-weight: 300;
 }
+
+/*#######################################################################
+search bar
+#######################################################################*/
+.search{
+    width: 100vw;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search #search-bar{
+    width: 80%;
+    height: 4rem;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    box-sizing: border-box;
+}
+.search button{
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    left:-4rem;
+    background-color: #6496EB;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search img{
+    width: 80%;
+    height: 80%;
+}
+
+/*#######################################################################
+footer section
+#######################################################################*/
