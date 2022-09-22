@@ -21,7 +21,8 @@ async function render(obj){
     salary.innerHTML=obj.salary;
     cont.appendChild(div);
     // console.log(div);
-} 
+}
+var salary= document.querySelector(".salary-list") 
 async function api_call(){
     const prof=await fetch("https://randomuser.me/api/?results=15");
     let results=await prof.json();
@@ -49,9 +50,21 @@ async function api_call(){
             pro.forEach((i)=>{
                 if(ele!=i){
                     i.classList.add("unactive");
+                    salary.classList.remove("salary-unactive");
                 }
             })
         })
     })
 }
+
+var add=document.querySelector(".salary-input button");
+var salary_cont=document.querySelector(".salary-cont");
+var exep=document.querySelector("#exepense");
+var amount=document.querySelector("#amount");
+var tSalary=document.querySelector(".total-salary")
+add.addEventListener("click",()=>{
+    var h2=document.createElement("h2");
+    h2.innerHTML=`${exep.value}\t:\t${amount.value}`
+    salary_cont.appendChild(h2);
+})
 
