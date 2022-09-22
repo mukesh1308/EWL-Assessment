@@ -6,7 +6,7 @@
 }
 html{
     font-size: 10px;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 /*#######################################################################
@@ -21,6 +21,7 @@ nav{
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
+    background-color: white;
 }
 nav img{
     width: auto;
@@ -78,6 +79,39 @@ main
 main{
     width: 100vw;
     min-height: calc(85vh - 8rem);
+}
+.track-result{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(40rem,1fr));
+    grid-gap:3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3rem;
+    box-shadow: 0.5rem 0.5rem 3px gray;
+    overflow: hidden;
+    cursor: pointer;
+}
+.profile img{
+    height: 20rem;
+    width: auto;
+}
+.profile div{
+    margin-left: 1rem;
+}
+.profile h2{
+    font-family: monospace;
+    color: black;
+    font-weight: 300;
+    margin-top: 1rem;
 }
 /*#######################################################################
 footer section
