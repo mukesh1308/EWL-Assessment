@@ -18,6 +18,7 @@ nav{
     position: sticky;
     top:0px;
     left:0px;
+    z-index: 10000000;
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
@@ -109,9 +110,12 @@ main{
 }
 .profile h2{
     font-family: monospace;
-    color: black;
+    color: gray;
     font-weight: 300;
     margin-top: 1rem;
+}
+.profile h2:nth-child(1){
+    color: black;
 }
 /*#######################################################################
 footer section

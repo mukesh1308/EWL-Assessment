@@ -15,10 +15,10 @@ async function render(obj){
     c_div.appendChild(salary);
     div.setAttribute("class","profile");
     img.setAttribute("src",`${obj.image}`);
-    name.innerHTML=`Name: ${obj.name}`;
-    email.innerHTML=`Email: ${obj.email}`;
-    location.innerHTML=`Counter: ${obj.location}`;
-    salary.innerHTML=`Salary: ${obj.salary}`;
+    name.innerHTML=obj.name;
+    email.innerHTML=obj.email;
+    location.innerHTML=obj.location;
+    salary.innerHTML=obj.salary;
     cont.appendChild(div);
     console.log(div);
 }
