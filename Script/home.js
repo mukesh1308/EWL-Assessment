@@ -20,24 +20,38 @@ async function render(obj){
     location.innerHTML=obj.location;
     salary.innerHTML=obj.salary;
     cont.appendChild(div);
-    console.log(div);
-}
-
-
-
+    // console.log(div);
+} 
 async function api_call(){
     const prof=await fetch("https://randomuser.me/api/?results=15");
-    const results=await prof.json();
+    let results=await prof.json();
     // console.log(results)
-    const profile=results.results;
+    let profile=results.results;
+    if((localStorage.getItem("userprofile")==null)){
+        localStorage.setItem("userprofile",JSON.stringify(profile));
+    }
+    profile=JSON.parse(localStorage.getItem("userprofile"));
     profile.forEach((ele)=>{
         let obj={};
         obj["name"]=ele.name.first+" "+ele.name.last;
         obj["email"]=ele.email;
         obj["location"]=ele.location.country;
-        obj["image"]=ele.picture.thumbnail;
+        obj["image"]=ele.picture.large;
         obj["salary"]=100000;
         // console.log(obj);
         render(obj);
     })
+    var pro=document.querySelectorAll(".profile");
+    console.log(pro);
+    pro.forEach((ele)=>{
+        ele.addEventListener("click",()=>{
+            console.log(ele);
+            pro.forEach((i)=>{
+                if(ele!=i){
+                    i.classList.add("unactive");
+                }
+            })
+        })
+    })
 }
+
