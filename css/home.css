@@ -52,6 +52,7 @@ search bar
     border-radius: 2rem;
     padding-left: 2rem;
     box-sizing: border-box;
+    border:1px solid gray;
 }
 .search button{
     width: 4rem;
@@ -64,6 +65,7 @@ search bar
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
 }
 .search img{
     width: 80%;
@@ -73,7 +75,10 @@ search bar
 /*#######################################################################
 main
 #######################################################################*/
-
+main{
+    width: 100vw;
+    min-height: calc(85vh - 8rem);
+}
 /*#######################################################################
 footer section
 #######################################################################*/
