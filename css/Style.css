@@ -16,6 +16,11 @@ nav{
     height: 8rem;
     display: flex;
     align-items: center;
+    position: sticky;
+    top:0px;
+    right: 0px;
+    background-color: white;
+    border-bottom: 1px solid black;
 }
 nav img{
     height: 80%;
