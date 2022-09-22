@@ -189,3 +189,31 @@ salary section
 .salary-unactive{
     display: none;
 }
+.expense{
+    width:50rem;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.expense h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+    width: 20rem;
+    min-height: 4rem;
+    line-height: 4rem;
+}
+.expense p{
+    font-size: 3rem;
+}
+.expense span{
+    display: inline-block;
+    width: 20rem;
+    height: 4rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 2rem;
+}

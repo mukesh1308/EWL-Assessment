@@ -43,10 +43,10 @@ async function api_call(){
         render(obj);
     })
     var pro=document.querySelectorAll(".profile");
-    console.log(pro);
+    // console.log(pro);
     pro.forEach((ele)=>{
         ele.addEventListener("click",()=>{
-            // console.log();
+            console.log(ele.childNodes[2]);
             pro.forEach((i)=>{
                 if(ele!=i){
                     i.classList.add("unactive");
