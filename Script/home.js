@@ -46,7 +46,7 @@ async function api_call(){
     console.log(pro);
     pro.forEach((ele)=>{
         ele.addEventListener("click",()=>{
-            console.log(ele);
+            // console.log();
             pro.forEach((i)=>{
                 if(ele!=i){
                     i.classList.add("unactive");
@@ -64,7 +64,7 @@ var amount=document.querySelector("#amount");
 var tSalary=document.querySelector(".total-salary")
 add.addEventListener("click",()=>{
     var h2=document.createElement("h2");
-    h2.innerHTML=`${exep.value}\t:\t${amount.value}`
+    h2.innerHTML=`${exep.value} : ${amount.value}`
     salary_cont.appendChild(h2);
 })
 

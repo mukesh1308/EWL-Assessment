@@ -80,7 +80,13 @@ login section
     font-size: 6rem;
     text-transform: capitalize;
 }
-.cont form input[type="submit"]{
+.cont form button{
+    box-sizing: border-box;
+    width: 80%;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 2.5rem;
+    margin-top: 2rem;
     background-color: #6496EB;
     color: white;
     padding-left: 0px;
