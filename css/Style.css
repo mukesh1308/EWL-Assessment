@@ -7,9 +7,35 @@
 html{
     font-size: 10px;
 }
+
+/*#######################################################################
+nav section
+#######################################################################*/
+nav{
+    width: 100vw;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+nav img{
+    height: 80%;
+    width: auto;
+    margin-left: 8rem;
+}
+nav h1{
+    font-size: 3rem;
+    margin-left: 2rem;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+/*#######################################################################
+login section
+#######################################################################*/
 .cont-bg{
     width: 100vw;
-    height: 90vh;
+    height: calc(100vh - 8rem);
     background-image: url("../images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
