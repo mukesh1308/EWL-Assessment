@@ -1,27 +1,19 @@
 async function render(obj){
     const cont=document.querySelector(".track-result");
     const div=document.createElement("div");
-    const c_div=document.createElement("div");
-    const img=document.createElement("img");
-    const name=document.createElement("h2");
-    const email=document.createElement("h2");
-    const location=document.createElement("h2");
-    const salary=document.createElement("h2");
-    div.appendChild(img);
-    div.appendChild(c_div);
-    c_div.appendChild(name);
-    c_div.appendChild(email);
-    c_div.appendChild(location);
-    c_div.appendChild(salary);
+    div.innerHTML=`<img src="${obj.image}" alt="not found">
+    <div>
+        <h2>${obj.name}</h2>
+        <h2>${obj.email}</h2>
+        <h2>${obj.location}</h2>
+        <h2>${obj.salary}</h2>
+    </div>`;
     div.setAttribute("class","profile");
-    img.setAttribute("src",`${obj.image}`);
-    name.innerHTML=obj.name;
-    email.innerHTML=obj.email;
-    location.innerHTML=obj.location;
-    salary.innerHTML=obj.salary;
     cont.appendChild(div);
-    // console.log(div);
+    console.log(div);
 }
+
+
 var salary= document.querySelector(".salary-list") 
 async function api_call(){
     const prof=await fetch("https://randomuser.me/api/?results=15");
@@ -61,10 +53,12 @@ var add=document.querySelector(".salary-input button");
 var salary_cont=document.querySelector(".salary-cont");
 var exep=document.querySelector("#exepense");
 var amount=document.querySelector("#amount");
-var tSalary=document.querySelector(".total-salary")
+var tSalary=document.querySelector(".total-salary");
+var rAmount=document.querySelector("#remaining-amount");
 add.addEventListener("click",()=>{
-    var h2=document.createElement("h2");
-    h2.innerHTML=`${exep.value} : ${amount.value}`
-    salary_cont.appendChild(h2);
+    var div=document.createElement("h2");
+    div.innerHTML=`<h2>${exep.value}</h2> <p>:</p> <span>${amount.value}</span>`
+    div.setAttribute("class","expense");
+    salary_cont.insertBefore(div,rAmount);
 })
 
