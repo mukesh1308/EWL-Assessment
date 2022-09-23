@@ -10,7 +10,7 @@ async function render(obj){
     </div>`;
     div.setAttribute("class","profile");
     cont.appendChild(div);
-    console.log(div);
+    // console.log(div);
 }
 
 
@@ -38,7 +38,6 @@ async function api_call(){
     // console.log(pro);
     pro.forEach((ele)=>{
         ele.addEventListener("click",()=>{
-            console.log(ele.childNodes[2]);
             pro.forEach((i)=>{
                 if(ele!=i){
                     i.classList.add("unactive");
@@ -56,9 +55,21 @@ var amount=document.querySelector("#amount");
 var tSalary=document.querySelector(".total-salary");
 var rAmount=document.querySelector("#remaining-amount");
 add.addEventListener("click",()=>{
-    var div=document.createElement("h2");
-    div.innerHTML=`<h2>${exep.value}</h2> <p>:</p> <span>${amount.value}</span>`
+    let div=document.createElement("div");
+    div.innerHTML=`<h2>${exep.value}</h2> 
+        <p>:</p> 
+        <span>${amount.value}</span>
+        <img src="images/close.png" class="close">`
     div.setAttribute("class","expense");
     salary_cont.insertBefore(div,rAmount);
-})
+    // var close=document.querySelector(".close");
+    let close=div.children[3];
+    // console.log(close);
+    close.addEventListener("click",()=>{
+        let parent=close.parentNode;
+        // console.log(parent);
+        parent.remove();
+    })
+});
+
 

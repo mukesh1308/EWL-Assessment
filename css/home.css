@@ -196,6 +196,7 @@ salary section
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+    position: relative;
 }
 .expense h2{
     font-size: 2rem;
@@ -216,4 +217,13 @@ salary section
     text-align: center;
     line-height: 4rem;
     font-size: 2rem;
+}
+.expense .close{
+    width:auto;
+    height: 1.5rem;
+    position: absolute;
+    top:50%;
+    left: calc(100% + 2rem);
+    transform: translate(-50%,-50%);
+    cursor: pointer;
 }
