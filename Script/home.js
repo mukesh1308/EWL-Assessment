@@ -38,7 +38,6 @@ function add_expense(obj,data){
     div.setAttribute("class","expense");
     salary_cont.insertBefore(div,rAmount);
     let close=div.children[3];
-    data.rAmount-=obj.amount;
     rAmount.children[2].innerHTML=`&#8377 `+data.rAmount;
     localStorage.setItem(text,JSON.stringify(data));
     // console.log(close);
@@ -52,7 +51,7 @@ function add_expense(obj,data){
         // console.log(data);
         // console.log(typeof data.rAmount);
         data.rAmount+=obj.amount;
-        console.log(typeof data.rAmount);
+        console.log(data.rAmount);
         rAmount.children[2].innerHTML=`&#8377 `+data.rAmount;
         localStorage.setItem(text,JSON.stringify(data));
         parent.remove();
@@ -107,6 +106,7 @@ async function api_call(){
 
 add.addEventListener("click",()=>{
     let obj={exp:exep.value,amount:parseInt(amount.value)};
+    data.rAmount-=obj.amount;
     add_expense(obj,data);
     data.expense.push(obj);
     localStorage.setItem(text,JSON.stringify(data));
