@@ -227,3 +227,6 @@ salary section
     transform: translate(-50%,-50%);
     cursor: pointer;
 }
+#salary span,#remaining-amount span{
+    color: green;
+}
